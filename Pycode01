@@ -27,3 +27,33 @@ while True:
 
     print("You chose:", user)
     print("Computer chose:", computer)
+     # Check if both choices are the same
+    if user == computer:
+        print("It's a tie!")
+
+    # Check the conditions in which the user wins
+    elif (user == "rock" and computer == "scissors") or \
+         (user == "scissors" and computer == "paper") or \
+         (user == "paper" and computer == "rock"):
+
+      
+        print("You win!")
+
+     
+        user_score += 1
+      
+    else:
+        print("Computer wins!")
+        computer_score += 1
+
+    # Display the current scores
+    print("Your Score:", user_score)
+    print("Computer Score:", computer_score)
+
+    # Ask the user whether they want to play another round
+    play_again = input("Do you want to play again? (yes/no): ").lower()
+
+    # If the user does not enter yes, stop the game
+    if play_again != "yes":
+        print("\nThanks for playing!")
+        break 
